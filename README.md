@@ -1,4 +1,4 @@
-# ccip-safety-kit
+# CCIP safety kit
 
 TypeScript CLI for analyzing Solidity CCIP receiver contracts for common safety issues.
 
