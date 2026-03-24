@@ -1,0 +1,52 @@
+{
+  "name": "ccip-safety-kit",
+  "version": "0.1.0",
+  "description": "TypeScript CLI for analyzing Solidity CCIP receiver contracts for common safety issues.",
+  "license": "MIT",
+  "bin": {
+    "ccip-safety-kit": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "examples",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ccip",
+    "chainlink",
+    "solidity",
+    "security",
+    "analysis",
+    "cli",
+    "web3",
+    "audit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateja3m/ccip-safety-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mateja3m/ccip-safety-kit/issues"
+  },
+  "homepage": "https://github.com/Mateja3m/ccip-safety-kit#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "analyze": "node ./dist/cli.js analyze ./examples",
+    "analyze:json": "node ./dist/cli.js analyze ./examples --json",
+    "test": "npm run build && node ./dist/cli.js --help && node ./dist/cli.js analyze ./examples/safe-receiver",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.0",
+    "typescript": "^5.9.2"
+  }
+}

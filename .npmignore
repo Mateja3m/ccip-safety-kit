@@ -1,0 +1,6 @@
+src/
+node_modules/
+dist/**/*.map
+package-lock.json
+tsconfig.json
+
