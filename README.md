@@ -86,8 +86,6 @@ npm install -g ccip-safety-kit
 ccip-safety-kit analyze ./contracts
 ```
 
-After publish, replace `./contracts` with the folder or file that contains your Solidity receiver contracts.
-
 Published package examples:
 
 ```bash
