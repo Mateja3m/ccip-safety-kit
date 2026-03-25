@@ -52,7 +52,7 @@ function helpText(): string {
     "  ccip-safety-kit --help",
     "",
     "Examples:",
-    "  ccip-safety-kit analyze ./examples",
+    "  ccip-safety-kit analyze ./contracts",
     "  ccip-safety-kit analyze ./contracts --json",
   ].join("\n");
 }
@@ -94,4 +94,3 @@ function run(): number {
 }
 
 process.exitCode = run();
-

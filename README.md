@@ -81,9 +81,20 @@ npm run build
 Optional npm-style usage after publish:
 
 ```bash
-npx ccip-safety-kit analyze ./examples
+npx ccip-safety-kit analyze ./contracts
 npm install -g ccip-safety-kit
-ccip-safety-kit analyze ./examples
+ccip-safety-kit analyze ./contracts
+```
+
+After publish, replace `./contracts` with the folder or file that contains your Solidity receiver contracts.
+
+Published package examples:
+
+```bash
+npx ccip-safety-kit analyze ./contracts
+npx ccip-safety-kit analyze ./contracts --json
+ccip-safety-kit analyze ./src
+ccip-safety-kit analyze ./src/Receiver.sol --json
 ```
 
 ## Example output
@@ -119,9 +130,3 @@ Current heuristic checks include:
 - sender or source validation
 - pause or emergency control
 - structured debug events
-
-Rule details:
-
-- [Quickstart](./docs/quickstart.md)
-- [Rules](./docs/rules.md)
-- [Roadmap](./docs/roadmap.md)
